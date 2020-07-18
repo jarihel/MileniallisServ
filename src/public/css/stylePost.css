@@ -1,0 +1,28 @@
+
+.bodyPost{
+    margin-top: 10px;
+    width: 90%;
+    
+    left: 5%;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+}
+.imagenPost {
+    margin-top: 10px;
+    left: 10%;
+    width: 80%;
+    height: 500px;
+    border-radius: 5px;
+    position: relative;
+}
+.textPost{
+font-size: 20px;
+margin-left: 10%;
+margin-right: 10%;
+text-align: justify;
+padding-top: 30px;
+border-radius: 5px;
+
+}
+

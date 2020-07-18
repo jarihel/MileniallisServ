@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <%- include('partials/head.html') %>
+    <title><%= title%></title>
+    <link rel="stylesheet" href="css/home/index.css">
+    <link rel="stylesheet" href="css/home/clima2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body class="body">
+    <%- include('partials/fondo.html') %>
+    <div id="body">
+
+        <%- include('partials/navigation.html') %>
+        <div class="articulos-recientes">
+            <% for(var i=0; i < 3; i++) { %>
+            <article class="articulo-contenedor">
+                <div>
+                    <a href="">
+                        <img src="img/home/noticia<%=i+1%>.jpg" alt="" class="articulo-img">
+                        <div class="articulo-texto">
+                            <h2><%=data[i].titulo%></h2>
+                        </div>
+
+                    </a>
+                </div>
+            </article>
+            <% } %>
+        </div>
+
+        <!--<%- include('partials/clima2.html') %>-->
+
+        <div class="secciones1">
+            <div class="seccion1-1">
+
+
+            </div>
+            <div class="seccion1-2">
+                <%- include('partials/clima2.html') %>
+            </div>
+
+
+        </div>
+        <div class="secciones2"></div>
+
+
+        <%- include('partials/footer.html') %>
+
+    </div>
+
+
+
+</body>
+<script src="js/tienda.js"></script>
+<script src="js/fondo.js"></script>
+<script src="js/home/clima2.js"></script>
+
+</html>

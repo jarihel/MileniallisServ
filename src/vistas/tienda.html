@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title%></title>
+    <%- include('partials/head.html') %>
+    <!--tienda-->
+    <link rel="stylesheet" href="css/tienda.css">
+</head>
+
+<body class="body">
+    <%- include('partials/fondo.html') %>
+    <div id="body">
+        <%- include('partials/navigation.html') %>
+        <div class="wrapper-tienda">
+            <div class="container-encabezado">
+                <h1>Tienda online</h1>
+            </div>
+            <div class="tienda">
+                <% for(var i=0; i < productos.length; i++) { %>
+                <div class="card">
+                    <img src="img/tienda/curso1.jpg" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4><%= productos[i].nombreProducto%></h4>
+                        <p><%= productos[i].textoProducto%></p>
+                        <img src="<%= productos[i].imgProducto%>">
+                        <p class="precio"><%= productos[i].precioProducto%><span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/tienda.js"></script>
+<script src="js/fondo.js"></script>
+
+</html>
